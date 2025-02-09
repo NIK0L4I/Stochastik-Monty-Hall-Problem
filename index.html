@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monty Hall Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Monty Hall Problem Simulator</h1>
+    <p>Click on a door, decide whether to switch, and see the magic of probability in action!</p>
+  </header>
+
+  <!-- Interactive Game Section -->
+  <section id="game">
+    <div class="doors">
+      <!-- Doors will be rendered here -->
+      <div class="door" id="door1" data-door="1">
+        <img src="assets/door-closed.png" alt="Door 1">
+      </div>
+      <div class="door" id="door2" data-door="2">
+        <img src="assets/door-closed.png" alt="Door 2">
+      </div>
+      <div class="door" id="door3" data-door="3">
+        <img src="assets/door-closed.png" alt="Door 3">
+      </div>
+    </div>
+    <div id="controls">
+      <button id="resetBtn" disabled>New Game</button>
+      <!-- A section to allow switching or staying if needed -->
+      <div id="decisionButtons" style="display:none;">
+        <button id="stayBtn">Stay</button>
+        <button id="switchBtn">Switch</button>
+      </div>
+    </div>
+    <div id="result"></div>
+  </section>
+
+  <!-- Simulation & Statistical Analysis Section -->
+  <section id="simulation">
+    <h2>Run Multiple Simulations</h2>
+    <label for="trialCount">Number of Trials:</label>
+    <input type="number" id="trialCount" value="1000" min="1">
+    <button id="runSimulation">Run Simulation</button>
+    <div id="simulationResults"></div>
+    <!-- A canvas for Chart.js can go here -->
+    <canvas id="chartCanvas" width="400" height="200"></canvas>
+  </section>
+
+  <!-- Explanation Section -->
+  <section id="explanation">
+    <h2>Understanding the Monty Hall Problem</h2>
+    <p>[Provide an in-depth explanation with visuals and step-by-step breakdown of probabilities here.]</p>
+  </section>
+
+  <script src="script.js"></script>
+  <!-- Optionally, include Chart.js if using it for the simulation analysis -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+</body>
+</html>
