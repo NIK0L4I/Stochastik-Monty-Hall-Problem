@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 20px 0;
+}
+
+.doors {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.door {
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.door:hover {
+  transform: scale(1.05);
+}
+
+#controls, #result, #simulationResults {
+  margin: 20px 0;
+}
+
+/* Additional styling for responsiveness and clarity can be added here */
